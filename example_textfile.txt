@@ -1,0 +1,8 @@
+${title}   Autodoc example
+${date}    1/1/2013
+${author}  Delvison Castillo
+
+# Lines starting with a pound are comments
+
+# Key values with a value of null are replaced with a space in the output
+${key}     null
