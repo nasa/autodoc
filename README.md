@@ -7,10 +7,8 @@ Autodoc was designed as a means to automate reports and alleviate the effort nee
 Given a docx, pptx or xlsx file along with a text file of desired content Autodoc can output a
 document of the same format with the desired content inserted into the template.
 
-Use
-====
 Autodoc replaces key values in a document with a desired value stated in a textfile.
-Autodoc can be used in both graphical and command-line environments. The application
+It can be used in both graphical and command-line environments. The application
 takes in the three following inputs:
 
 Text file with key words and desired values (tab or space delimitted)
