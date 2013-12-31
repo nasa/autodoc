@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+
+.DS_Store
+._.DS_Store
+._example_docx_template.docx
+._example_pptx_template.pptx
+._readme.pdf
