@@ -1,0 +1,79 @@
+<title>
+Autodoc
+</title>
+<style>
+    body {width: 675px; margin: auto; text-align: justify;}
+    h1 {text-align: center; margin-bottom: 15px; }
+    h2 {border-bottom: 2px solid black; padding-top: 20px;}
+    h3 {padding-top: 15px;}
+    pre {margin-left: 20px;}
+    p {margin-left: 35px; margin-right: 35px; font-size: 17px;}
+    a {text-decoration: none;}
+    a:hover {text-decoration: underline;}
+    .center {text-align: center; margin: auto;}
+    .greycenter {background-color: lightgrey; text-align:
+    center; margin-bottom: 15px; margin-left: 5px; margin-right:
+    5px;}
+    li {margin-left: 35px;}
+    li>p {margin-left: 15px;}
+    ol {padding-left: 40px; padding-right: 40px;}
+</style>
+
+<p><br/> <br/></p>
+<h1 id="autodoc-microsoft-office-document-generator">Autodoc (Microsoft Office Document Generator)</h1>
+<center>
+<img src="img/banner.jpg" />
+</center>
+
+<center>
+[<a href="autodoc-v1.6.jar">Download</a>]
+</center>
+
+<h2 id="overview">Overview</h2>
+<p>Reports and presentations are constantly being written by the Cassini team. Often times, many of these documents follow a consistent format that only change slightly in content between versions. As a result of their consistency in format, these documents are a great candidate for automation. <em>Autodoc</em> was designed as a means to automate such reports in order to alleviate the amount of work that its writers would have to do. It is a tool that when given a docx, pptx or xlsx file along with a text file of desired content can output a document of the same format with the desired content inserted into the template.</p>
+<h2 id="use">Use</h2>
+<p><em>Autodoc</em> replaces <em>key</em> values in a document with a desired value stated in a textfile. <em>Autodoc</em> can be used in both graphical and command-line environments. The application takes in the three following inputs:</p>
+<ul>
+<li><strong>Text file</strong> with key words and desired values (tab or space delimitted)</li>
+<li><strong>Template file</strong>. This can be a docx, pptx or xlsx file with included keywords to be replaced</li>
+<li><strong>Output path</strong>. This is the desired path where you would like your desired output document saved to.</li>
+</ul>
+<h3 id="text-file-structure">Text File Structure</h3>
+<ul>
+<li>Text file must be <strong><em>space</em></strong> or <strong><em>tab</em></strong> delimitted <em>(key[space]value)</em></li>
+<li>Lines beginning with a hashtag (#) will be treated as <strong><em>comments</em></strong></li>
+<li>Keys with values of <strong><em>null</em></strong> will be replaced with a blank space in document</li>
+<li>Keys should be <strong><em>unique</em></strong> strings. Using syntax such as <em>${this}</em> will achieve this</li>
+<li>Keys must be <strong><em>identical</em></strong> in both template file and text file</li>
+</ul>
+<h3 id="example-files">Example Files</h3>
+<ul>
+<li><a href="examples/example_textfile.txt">Example Text File</a></li>
+<li><a href="examples/example_docx_template.docx">Example Docx Template</a></li>
+<li><b><u>Note</u></b> Docx, Pptx, Xlsx files all follow the same rules of keyword implementation.</li>
+</ul>
+<h3 id="graphical-mode">Graphical Mode</h3>
+<p>Can be executed by double-clicking the JAR file or executing the JAR from command-line without any inputs. Input files can be drag-and-dropped into their corresponding fields or selected through their appropriate file browser. This mode also supports an auto-open feature that when selected will automatically open the output file when generated.</p>
+<h3 id="command-line-mode">Command-line Mode</h3>
+<p>Can be executed by command-line by executing the JAR file with the required input.</p>
+<p><strong>Example (With and without auto-open):</strong></p>
+<pre><code>   java -jar autodoc.jar /path/to/textfile /path/to/template /path/of/output
+
+   java -jar autodoc.jar /path/to/textfile /path/to/template /path/of/output true</code></pre>
+<h3 id="true-document-automation">True Document Automation</h3>
+<p>True document automation is ideal for documents that are generated routinely and vary only slightly from one report to the next. True automation can be achieved by utilizing <em>Autodoc</em> in command-line mode and tools such as shell scripts and job-scheduling software such as <a href="http://en.wikipedia.org/wiki/Cron">Cron</a> in Unix machines. The diagram below depicts the process that can be captured by a shell script in order to acheive true automation.</p>
+<center>
+<img src="img/diagram.png" />
+</center>
+
+<h2 id="development">Development</h2>
+<p><a href="javadoc/index.html">Javadoc</a> - Java documentation for developers.</p>
+<h2 id="download">Download</h2>
+<p><a href="autodoc-v1.6.jar">Download</a></p>
+<h2 id="about">About</h2>
+<p><em>Autodoc</em> was developed by JPL Summer Intern Delvison Castillo under the advisement of Diane Conner and Bill Heventhal.</p>
+<h2 id="changelog">Changelog</h2>
+<p><strong>Tue May 27 12:06:00 PDT 2014</strong> - <strong>v1.6</strong> - Fixed issues found with PowerPoint file conversion: '${' were sometimes left over after substitution, and tables, headers, and footers were not included by previous substitution methods.  Also found issue which caused double-substitution of some text; refactored pptx substitution method.</p>
+<p><strong>Wed Aug 21 13:56:45 PDT 2013</strong> - <strong>v1.5</strong> - Auto-open and keywords not found notifications implemented in command-line mode</p>
+<p><strong>Mon Aug 19 14:44:57 PDT 2013</strong> - <strong>v1.4</strong> - Fixed powerpoint in-text replace for keys such as ${this} and [this]</p>
+<p><strong>Fri Aug 16 16:38:46 PDT 2013</strong> - <strong>v1.3</strong> - Fixed Excel file bug. Values for formulas were not being recalculated. Now values formulas will recalculate after Autodoc outputs an xlsx file.</p>
