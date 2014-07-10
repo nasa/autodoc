@@ -1,7 +1,6 @@
-AutoDoc
-=======
+## AutoDoc
 
-This is a tool for generating .docx, .xlsx, and .pptx files from templates.
+This is a tool for generating .docx, .xlsx, and .pptx files text files and word, excel, and powerpoint files with proper formating.  See the index.html for complete instructions.
 
 To use: AutoDoc is runnable by selecting "Open.." or double-clicking autodoc-v1.6.jar.  You may also download the file directly from GitHub by clicking on "View RAW".
 
