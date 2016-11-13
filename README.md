@@ -1,17 +1,12 @@
-autodoc
-=======
+## AutoDoc
 
-Create Microsoft Documents automatically using Text and Template files.
+This is a tool for generating .docx, .xlsx, and .pptx files text files and word, excel, and powerpoint files with proper formating.  See the index.html for complete instructions.
 
-Autodoc was designed as a means to automate reports and alleviate the effort needed to generate routine documents.
-Given a docx, pptx or xlsx file along with a text file of desired content Autodoc can output a
-document of the same format with the desired content inserted into the template.
+To use: AutoDoc is runnable by selecting "Open.." or double-clicking autodoc-v1.6.jar.  You may also download the file directly from GitHub by clicking on "View RAW".
 
-Autodoc replaces key values in a document with a desired value stated in a textfile.
-It can be used in both graphical and command-line environments. The application
-takes in the three following inputs:
-
-Text file with key words and desired values (tab or space delimitted)
-Template file. This can be a docx, pptx or xlsx file with included keywords to be replaced
-Output path. This is the desired path where you would like your desired output document
-saved to.
+To recompile:
+1) Clone this repo on your machine.
+2) Make any necessary edits to source code.
+3) If edits were made, open compile.sh and update the version number.
+4) Open a Terminal window, navigate to directory of local repo.
+5) Type "sh compile.sh jar" on a command line to generate a new .jar file.

@@ -46,7 +46,7 @@ class GUI
   GUI()
   {
   	//JFrame
-    frm = new JFrame("AutoDoc (Microsoft Office Document Automator) v 1.5");
+    frm = new JFrame("AutoDoc (Microsoft Office Document Automator) v 1.6");
     frm.setLayout(gbag);
     frm.setSize(640, 220); //give the frame a size
     frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
